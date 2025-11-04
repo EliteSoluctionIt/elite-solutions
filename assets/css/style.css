@@ -793,3 +793,17 @@ body {
     font-size: 1.8rem;
   }
 }
+/* --- BLOCCO ANTI GOOGLE TRANSLATE --- */
+body > .goog-te-banner-frame.skiptranslate,
+body > .goog-te-gadget-icon,
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  width: 0 !important;
+}
+
+html {
+  margin-top: 0 !important;
+}
+/* --- FINE BLOCCO ANTI GOOGLE TRANSLATE --- */
