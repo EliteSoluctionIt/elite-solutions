@@ -360,8 +360,11 @@ img {
 /* Il riquadro laterale dell'Hero */
 .hero-right {
   border-radius: var(--radius-xl);
-  border: 1px solid rgba(148,163,184,0.28);
-  background: radial-gradient(circle at top left, rgba(15,23,42,0.98), rgba(2,6,23,0.98));
+  /* Riquadro reso semi-trasparente */
+  border: 1px solid rgba(148,163,184,0.15); /* Bordo più sottile */
+  background: rgba(2, 6, 23, 0.7); /* Sfondo scuro semi-trasparente (Opacità 70%) */
+  backdrop-filter: blur(8px); /* Effetto vetro smerigliato */
+  
   box-shadow: var(--shadow-soft);
   padding: 1.4rem 1.5rem;
 }
