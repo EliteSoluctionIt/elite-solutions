@@ -1,4 +1,3 @@
-
 /* SITO ELITE 2.0 - Stile principale */
 
 :root {
@@ -18,6 +17,7 @@
   --transition: 180ms ease-out;
 }
 
+/* Base Reset */
 *,
 *::before,
 *::after {
@@ -48,7 +48,7 @@ img {
   display: block;
 }
 
-/* Layout base */
+/* --- Layout Base --- */
 
 .page {
   min-height: 100vh;
@@ -63,7 +63,7 @@ img {
   padding: 0 1.5rem;
 }
 
-/* Header */
+/* --- Header --- */
 
 .site-header {
   position: sticky;
@@ -125,7 +125,7 @@ img {
   color: var(--muted);
 }
 
-/* Nav */
+/* --- Navigation --- */
 
 .nav {
   display: flex;
@@ -249,7 +249,7 @@ img {
   box-shadow: 0 12px 30px rgba(0,0,0,0.55);
 }
 
-/* Hero */
+/* --- Hero Section (Esempio di "riquadro" principale) --- */
 
 .hero {
   position: relative;
@@ -357,6 +357,7 @@ img {
   color: #e5e7eb;
 }
 
+/* Il riquadro laterale dell'Hero */
 .hero-right {
   border-radius: var(--radius-xl);
   border: 1px solid rgba(148,163,184,0.28);
@@ -386,7 +387,7 @@ img {
   color: var(--muted);
 }
 
-/* Section generic */
+/* --- Section generic --- */
 
 .section {
   padding: 2.5rem 0 2.75rem;
@@ -416,7 +417,7 @@ img {
   max-width: 32rem;
 }
 
-/* Three bundles cards */
+/* --- Three bundles cards --- */
 
 .bundles-grid {
   display: grid;
@@ -468,6 +469,7 @@ img {
   margin-top: 0.6rem;
 }
 
+/* Primary Button */
 .btn-primary {
   display: inline-flex;
   align-items: center;
@@ -490,6 +492,7 @@ img {
   filter: brightness(1.05);
 }
 
+/* Secondary Button */
 .btn-secondary {
   display: inline-flex;
   align-items: center;
@@ -511,7 +514,7 @@ img {
   box-shadow: 0 14px 35px rgba(0,0,0,0.65);
 }
 
-/* Two column sections & bundle detail */
+/* --- Two column sections & bundle detail --- */
 
 .section-soft {
   background: radial-gradient(circle at top, #020617, #020617 55%, #020617);
@@ -595,7 +598,7 @@ img {
   object-fit: cover;
 }
 
-/* Contact section */
+/* --- Contact section --- */
 
 .contact-layout {
   display: grid;
@@ -683,7 +686,7 @@ img {
   margin-top: 0.45rem;
 }
 
-/* Footer */
+/* --- Footer --- */
 
 .site-footer {
   padding: 1.8rem 0 1.4rem;
@@ -705,23 +708,7 @@ img {
   color: #e5e7eb;
 }
 
-/* Google Translate hiding */
-
-#google_translate_element {
-  display: none !important;
-}
-
-.goog-logo-link,
-.goog-te-gadget span,
-.goog-te-banner-frame.skiptranslate {
-  display: none !important;
-}
-
-body {
-  top: 0px !important;
-}
-
-/* Buttons alignment */
+/* --- Utilities e Allineamento --- */
 
 .text-center {
   text-align: center;
@@ -734,7 +721,7 @@ body {
   text-align: center;
 }
 
-/* Responsiveness */
+/* --- Responsiveness --- */
 
 @media (max-width: 960px) {
   .hero-layout {
@@ -793,21 +780,17 @@ body {
     font-size: 1.8rem;
   }
 }
-/* --- BLOCCO ANTI GOOGLE TRANSLATE --- */
-body > .goog-te-banner-frame.skiptranslate,
-body > .goog-te-gadget-icon,
-.goog-te-banner-frame.skiptranslate {
+
+/* --- Anti Google Translate (Regole consolidate e pulite) --- */
+
+/* Nasconde l'elemento di Google Translate principale */
+#google_translate_element {
   display: none !important;
-  visibility: hidden !important;
-  height: 0 !important;
-  width: 0 !important;
 }
 
-html {
-  margin-top: 0 !important;
-}
-/* --- FINE BLOCCO ANTI GOOGLE TRANSLATE --- */
-/* --- BLOCCO MASCHERA BARRA GOOGLE TRANSLATE INTERNA --- */
+/* Nasconde banner, icona e logo di GT e resetta il margine del body/html */
+.goog-logo-link,
+.goog-te-gadget span,
 .goog-te-banner-frame.skiptranslate,
 .goog-te-gadget-icon,
 .goog-te-balloon-frame,
@@ -821,9 +804,10 @@ html {
   pointer-events: none !important;
 }
 
-body {
+body, html {
   top: 0px !important;
-  position: static !important;
+  margin-top: 0 !important;
+  position: static !important; /* Aggiunto per evitare problemi di posizionamento */
 }
-/* --- FINE BLOCCO --- */
-/* === HERO REFINEMENT v3.1 === */
+
+/* === FINE FILE CSS === */
